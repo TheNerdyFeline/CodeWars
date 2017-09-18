@@ -18,3 +18,16 @@ function duplicateCount(text){
     return arr.indexOf(val) !== i && arr.lastIndexOf(val) === i;
   }).length;
 }
+
+//CodeWars Day 2 - Filter numbers from mixed array
+/* I really want to learn about the built in functions available in javascript, so I am using each challenge in codewars to search the best solution and understand how to use each new method I find. For this one since it said filter I thought using the filter method again would work, but instead I found that the map method works better, and instead had it check the typeof element for each element in the array.*/
+function filter_list(l) {
+  let numArr = [];
+  l.map(function(elem) {
+    if(typeof elem === 'number') {
+      numArr.push(elem);
+    }
+  });
+  console.log(numArr);
+  return numArr;
+}
