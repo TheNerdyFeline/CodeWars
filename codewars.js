@@ -45,3 +45,13 @@ def duplicate_count(text):
     duplicate = [item for item, count in collections.Counter(letters).items() if count > 1]
     print duplicate
     return len(duplicate)
+
+
+//CodeWars Day 4 - Find # of Print Errors JS
+/*I used the filter method in a new way to compare 2 different Arrays to find the difference.  By using == -1 it finds where elements do not match.  I had this a while ago but failed to realize that my correct array to compare to was all in upper case letters, but the print string was in all lower case letters. Once I realized my error it was easy to find the right code.*/
+function printerError(s) {
+  let printArr = Array(13).fill().map((_, i) => String.fromCharCode('A'.charCodeAt(0) + i));
+  let printString = s.toUpperCase().split("");
+  let filterPrintString = printString.filter(elem => printArr.indexOf(elem) == -1);
+  return filterPrintString.length + "/" + printString.length;
+}
