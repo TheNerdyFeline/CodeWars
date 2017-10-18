@@ -33,7 +33,7 @@ function filter_list(l) {
 }
 
 //CodeWars Day 3- Find # of Duplicates Py
-/*I started learning python about a year and a half ago, but when I went back to school Iwas focusing on JavaScript. Since I finished school I decided to start praticing python again, and started repeating the kata I had already done in JS using Py. I made the mistake of thinking print would work to return the value, but that is like console.log and I needed to use retrun like I did in JS.*/
+/*I started learning python about a year and a half ago, but when I went back to school I was focusing on JavaScript. Since I finished school I decided to start praticing python again, and started repeating the kata I had already done in JS using Py. I made the mistake of thinking print would work to return the value, but that is like console.log and I needed to use return like I did in JS.*/
 import collections
 
 def duplicate_count(text):
@@ -55,3 +55,24 @@ function printerError(s) {
   let filterPrintString = printString.filter(elem => printArr.indexOf(elem) == -1);
   return filterPrintString.length + "/" + printString.length;
 }
+
+
+//CodeWars Day 5 - Letterss of Natac play_if_enough() Py
+
+def play_if_enough(hand, play):
+a = list(play)
+b = list(hand)
+print(hand, play)
+c = filter(lambda x: x in a, b)
+print(c)
+
+//printed <filter object at 0x7fd2d4e1eba8>
+
+def play_if_enough(hand, play):
+a = list(hand)
+b = list(play)
+print(hand, play)
+c = [x for x in a if x in b] 
+print(c)
+
+// printed b
